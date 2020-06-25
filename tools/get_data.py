@@ -19,7 +19,7 @@ def get_train_loader(args):
             transforms.Normalize(mean=CIFAR100_TRAIN_MEAN, std=CIFAR100_TRAIN_STD)
         ])
 
-        traindata = torchvision.datasets.CIFAR100(root='/home/share/jianheng/data', train=True, download=False,
+        traindata = torchvision.datasets.CIFAR100(root='./data', train=True, download=False,
                                                   transform=transform_train)
         trainloader = DataLoader(traindata, batch_size=args.b, shuffle=True, num_workers=2)
         return trainloader
@@ -44,7 +44,7 @@ def get_test_loader(args):
             transforms.Normalize(mean=CIFAR100_TRAIN_MEAN, std=CIFAR100_TRAIN_STD)
         ])
 
-        testdata = torchvision.datasets.CIFAR100(root='/home/share/jianheng/data', train=False, download=False,
+        testdata = torchvision.datasets.CIFAR100(root='./data', train=False, download=False,
                                                  transform=transform_test)
         testloader = DataLoader(testdata, batch_size=args.tb, shuffle=True, num_workers=2)
         return testloader

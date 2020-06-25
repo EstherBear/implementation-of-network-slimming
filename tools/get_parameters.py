@@ -15,7 +15,7 @@ def get_args():
     parser.add_argument("-gpu", default="0,1", help='select GPU', type=str)
     parser.add_argument("-l", default=0.0001, help='lambda for sparsity', type=float)
     parser.add_argument('-percent', type=float, default=0.5, help='scale sparse rate')
-    parser.add_argument('-save', default='./log', type=str, help='path to save prune model')
+    parser.add_argument('-save', default='./log', type=str, help='path to save model and training log')
     parser.add_argument("-retrainflag", action='store_true', help='retrain or not', default=False)
     parser.add_argument("-trainflag", action='store_true', help='normal train or not', default=False)
     parser.add_argument("-trainspflag", action='store_true', help='training with sparsity or not', default=False)
